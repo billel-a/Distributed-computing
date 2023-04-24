@@ -9,7 +9,7 @@ docker tag ImageID billela/flasksql:1
 
 docker push billela/flasksql:1
 
-docker build -t flasksql .
+docker build -t flasknews .
 
 docker tag ImageID billela/flasknews:1
 
