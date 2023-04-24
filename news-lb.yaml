@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: news-lb
+spec:
+  type: LoadBalancer
+  selector:
+    app: news
+  ports:
+    - protocol: TCP
+      name: news
+      port: 5500
+      targetPort: 5500
+    - protocol: TCP
+      name: mysqlflaskdp
+      port: 5000
+      targetPort: 5000

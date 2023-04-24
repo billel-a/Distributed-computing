@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-flask-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysqlflaskdp
+  template:
+    metadata:
+      labels:
+        app: mysqlflaskdp
+    spec:
+      containers:
+      - name: mysqlflaskdp
+        image: billela/flasksql:1
+        ports:
+        - containerPort: 5000
